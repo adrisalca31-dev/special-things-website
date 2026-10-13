@@ -78,6 +78,7 @@
 }
 
 
+
 /* =========================================
    2. PORTADA PRINCIPAL
 ========================================= */
@@ -89,8 +90,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  color: white;
-  background: #d8cdb9;
+  color: #fffdf9;
+  background: #b5a18e;
   overflow: hidden;
 }
 
@@ -104,6 +105,7 @@
   background-image: url("/images/hero.jpg");
   background-position: center 54%;
   background-size: cover;
+  background-repeat: no-repeat;
   transform: scale(1.01);
   animation: heroReveal 1.1s ease-out both;
 }
@@ -112,14 +114,15 @@
   background:
     linear-gradient(
       90deg,
-      rgba(35, 32, 27, 0.64),
-      rgba(35, 32, 27, 0.22) 65%,
-      rgba(35, 32, 27, 0.06)
+      rgba(55, 43, 34, 0.72) 0%,
+      rgba(55, 43, 34, 0.48) 38%,
+      rgba(55, 43, 34, 0.20) 70%,
+      rgba(55, 43, 34, 0.08) 100%
     ),
     linear-gradient(
       0deg,
-      rgba(35, 32, 27, 0.25),
-      transparent 35%
+      rgba(55, 43, 34, 0.30) 0%,
+      transparent 42%
     );
 }
 
@@ -165,7 +168,16 @@
   margin: 0;
 }
 
-.hero h1 em,
+.hero h1 {
+  color: #fffaf2;
+  text-shadow: 0 2px 18px rgba(48, 35, 25, 0.18);
+}
+
+.hero h1 em {
+  font-weight: 400;
+  color: #f0dcb8;
+}
+
 .statement h2 em {
   font-weight: 400;
   color: #ead8b8;
@@ -173,7 +185,7 @@
 
 .hero-copy {
   max-width: 470px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 253, 249, 0.92);
   font-size: 14px;
   line-height: 1.9;
   margin: 25px 0 32px;
@@ -204,7 +216,7 @@
 
 .button-gold {
   background: var(--gold);
-  color: #fff;
+  color: #fffdf9;
 }
 
 .button-gold:hover {
@@ -221,8 +233,8 @@
 }
 
 .light-link {
-  color: white;
-  border-color: rgba(255, 255, 255, 0.6);
+  color: #fffdf9;
+  border-color: rgba(255, 253, 249, 0.7);
 }
 
 .hero-bottom {
@@ -234,11 +246,52 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  border-top: 1px solid rgba(255, 253, 249, 0.4);
   font-size: 9px;
   letter-spacing: 0.16em;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 253, 249, 0.92);
 }
+
+/* Ajustes para teléfonos */
+@media (max-width: 640px) {
+  .hero {
+    height: calc(100svh - 90px);
+    min-height: 620px;
+    max-height: 780px;
+  }
+
+  .hero-image {
+    background-position: 58% center;
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(55, 43, 34, 0.66),
+        rgba(55, 43, 34, 0.30)
+      ),
+      linear-gradient(
+        0deg,
+        rgba(55, 43, 34, 0.42),
+        transparent 65%
+      );
+  }
+
+  .hero-content {
+    width: 86%;
+    margin-left: 7%;
+    padding: 50px 0 90px;
+  }
+
+  .hero-bottom {
+    left: 7%;
+    right: 7%;
+    gap: 12px;
+    font-size: 8px;
+  }
+}
+
 
 
 /* =========================================
@@ -1151,5 +1204,186 @@
 
   .hero-bottom {
     letter-spacing: 0.08em;
+  }
+}
+
+
+/* ========================================
+   SPECIAL THINGS — ROMANTIC WARM THEME
+   ======================================== */
+
+/* Fondos generales */
+.site-shell {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+.about,
+.services,
+.gallery,
+.process,
+.faq {
+  background-color: var(--paper);
+}
+
+.statement,
+.quote-section {
+  background-color: var(--cream);
+}
+
+/* Encabezados */
+h1,
+h2,
+h3,
+.section-title {
+  color: var(--ink);
+}
+
+p {
+  color: var(--muted);
+}
+
+/* Navegación */
+header,
+.site-header,
+.navbar {
+  background-color: rgba(255, 253, 249, 0.96);
+  border-color: var(--line);
+}
+
+nav a {
+  color: var(--ink);
+  transition: color 0.25s ease;
+}
+
+nav a:hover {
+  color: var(--gold-dark);
+}
+
+/* Botones */
+button,
+.button,
+.btn-primary,
+.cta-button {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.btn-primary,
+.cta-button {
+  background-color: var(--gold);
+  border: 1px solid var(--gold);
+  color: #fffdf9;
+}
+
+.btn-primary:hover,
+.cta-button:hover {
+  background-color: var(--gold-dark);
+  border-color: var(--gold-dark);
+  transform: translateY(-2px);
+}
+
+/* Tarjetas de servicios */
+.service-card {
+  background-color: var(--cream);
+  border: 1px solid var(--line);
+}
+
+.service-card h3 {
+  color: var(--ink);
+}
+
+.service-card p {
+  color: var(--muted);
+}
+
+/* Galería */
+.gallery-item {
+  background-color: var(--beige-light);
+}
+
+.gallery img {
+  transition: transform 0.5s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.025);
+}
+
+/* Formulario de cotización */
+.quote-form,
+form {
+  color: var(--ink);
+}
+
+input,
+textarea,
+select {
+  background-color: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--gold-dark);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(201, 166, 107, 0.14);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a29488;
+}
+
+/* Preguntas frecuentes */
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item button {
+  color: var(--ink);
+}
+
+/* Pie de página */
+footer,
+.site-footer {
+  background-color: var(--dark);
+  color: var(--cream);
+}
+
+footer p,
+.site-footer p {
+  color: #e4d7c9;
+}
+
+footer a:hover,
+.site-footer a:hover {
+  color: var(--champagne);
+}
+
+/* Selección y detalles decorativos */
+::selection {
+  background-color: var(--champagne);
+  color: var(--dark);
+}
+
+/* Accesibilidad: movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
