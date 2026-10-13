@@ -40,3 +40,17 @@ dist-ssr/
 # Local editor settings
 .vscode/
 .idea/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+
+# Operating system
+.DS_Store
+.localized
