@@ -1,0 +1,78 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #383630;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  /* Paleta Special Things */
+  --white: #ffffff;
+  --cream: #f8f6f0;
+  --paper: #ffffff;
+  --champagne: #e9d8b8;
+  --gold: #cba65e;
+  --gold-dark: #a88748;
+
+  /* Texto y bordes */
+  --ink: #383630;
+  --muted: #77766f;
+  --line: #e8e4db;
+  --dark: #33332f;
+
+  /* Tipografías */
+  --serif: "Playfair Display", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--champagne);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-dark);
+  outline-offset: 3px;
+}

@@ -1,0 +1,1155 @@
+
+/* =========================================
+   1. ANUNCIO Y ENCABEZADO
+========================================= */
+
+.announcement {
+  background: #33332f;
+  color: #fff;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.site-header {
+  min-height: 86px;
+  padding: 12px 6.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  display: block;
+  width: 180px;
+  max-height: 72px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 12px;
+}
+
+.nav > a:not(.nav-cta) {
+  transition: color 0.2s;
+}
+
+.nav > a:not(.nav-cta):hover {
+  color: var(--gold-dark);
+}
+
+.nav-cta {
+  border: 1px solid var(--gold);
+  padding: 13px 17px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-cta:hover {
+  background: var(--gold);
+  color: #fff;
+}
+
+.nav-cta span,
+.button span {
+  margin-left: 12px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+}
+
+
+/* =========================================
+   2. PORTADA PRINCIPAL
+========================================= */
+
+.hero {
+  min-height: min(760px, 78vw);
+  height: calc(100svh - 120px);
+  max-height: 850px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  background: #d8cdb9;
+  overflow: hidden;
+}
+
+.hero-image,
+.hero-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-image {
+  background-image: url("/images/hero.jpg");
+  background-position: center 54%;
+  background-size: cover;
+  transform: scale(1.01);
+  animation: heroReveal 1.1s ease-out both;
+}
+
+.hero-shade {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(35, 32, 27, 0.64),
+      rgba(35, 32, 27, 0.22) 65%,
+      rgba(35, 32, 27, 0.06)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(35, 32, 27, 0.25),
+      transparent 35%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(760px, 85%);
+  margin-left: 10%;
+  padding: 70px 0;
+  animation: fadeUp 0.8s 0.12s both;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--gold-dark);
+  font-weight: 600;
+  margin: 0 0 24px;
+}
+
+.eyebrow-light {
+  color: #f2e4c9;
+}
+
+.eyebrow span {
+  display: inline-block;
+  width: 27px;
+  height: 1px;
+  background: currentColor;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.hero h1,
+.intro h2,
+.section-heading h2,
+.statement h2,
+.process h2,
+.quote-intro h2,
+.faq h2 {
+  font: 400 clamp(46px, 6.3vw, 86px) / 1.07 var(--serif);
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+
+.hero h1 em,
+.statement h2 em {
+  font-weight: 400;
+  color: #ead8b8;
+}
+
+.hero-copy {
+  max-width: 470px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 25px 0 32px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 51px;
+  padding: 0 22px;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+  transition: transform 0.25s, background 0.25s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-gold {
+  background: var(--gold);
+  color: #fff;
+}
+
+.button-gold:hover {
+  background: var(--gold-dark);
+}
+
+.text-link {
+  font-size: 12px;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 8px;
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.light-link {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 6.5%;
+  right: 6.5%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================
+   3. ESPACIADO Y PRESENTACIÓN
+========================================= */
+
+.section-pad {
+  padding: 115px 9%;
+}
+
+.intro {
+  background: #fff;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 8%;
+  align-items: end;
+}
+
+.intro h2,
+.section-heading h2,
+.process h2,
+.quote-intro h2,
+.faq h2 {
+  font-size: clamp(39px, 4.4vw, 60px);
+}
+
+.intro h2 em,
+.section-heading h2 em,
+.process h2 em,
+.quote-intro h2 em,
+.faq h2 em {
+  color: var(--gold-dark);
+  font-weight: 400;
+}
+
+.intro-copy {
+  max-width: 440px;
+}
+
+.intro-copy p,
+.section-heading > p,
+.quote-intro > p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.95;
+  margin: 0 0 17px;
+}
+
+.intro-copy .text-link {
+  margin-top: 13px;
+}
+
+
+/* =========================================
+   4. SERVICIOS
+========================================= */
+
+.services {
+  background: var(--cream);
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 45px;
+}
+
+.section-heading > p {
+  max-width: 330px;
+  margin-bottom: 4px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.service-card {
+  min-width: 0;
+}
+
+.service-image {
+  height: clamp(210px, 28vw, 360px);
+  position: relative;
+  background-color: #e9e2d5;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.service-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(35, 32, 27, 0.2),
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+.service-image span {
+  position: absolute;
+  z-index: 1;
+  left: 17px;
+  top: 17px;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.service-info {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.service-info h3 {
+  font: 400 20px var(--serif);
+  margin: 0 0 8px;
+}
+
+.service-info p {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.service-info > a {
+  border: 1px solid var(--line);
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s;
+}
+
+.service-info > a:hover {
+  background: var(--gold);
+  color: white;
+  border-color: var(--gold);
+}
+
+
+/* =========================================
+   5. SECCIÓN DESTACADA
+========================================= */
+
+.statement {
+  background: #f0e7d8;
+  color: var(--ink);
+  padding: 100px 9%;
+  position: relative;
+  overflow: hidden;
+}
+
+.statement .eyebrow {
+  color: var(--gold-dark);
+}
+
+.statement h2 {
+  font-size: clamp(43px, 5.5vw, 72px);
+  margin-bottom: 32px;
+}
+
+.statement h2 em {
+  color: var(--gold-dark);
+}
+
+.statement::after {
+  content: "ST";
+  position: absolute;
+  right: 4%;
+  bottom: -0.45em;
+  font: italic 300px var(--serif);
+  color: rgba(168, 135, 72, 0.07);
+  pointer-events: none;
+}
+
+.statement-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.button-outline {
+  border-color: var(--gold-dark);
+  color: var(--ink);
+}
+
+.button-outline:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+
+
+/* =========================================
+   6. GALERÍA
+========================================= */
+
+.gallery {
+  background: #fff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr 1fr;
+  grid-template-rows: 250px 230px;
+  gap: 15px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  background: #e9e2d5;
+  color: white;
+  min-height: 0;
+}
+
+.gallery-item-1 {
+  grid-row: span 2;
+}
+
+.gallery-item-4 {
+  grid-column: 2 / 4;
+}
+
+.gallery-image {
+  position: absolute;
+  inset: 0;
+  background-color: #e9e2d5;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.045);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  right: 40px;
+}
+
+.gallery-caption span {
+  font-size: 9px;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: #f3dfb9;
+}
+
+.gallery-caption h3 {
+  font: 400 22px var(--serif);
+  margin: 8px 0 0;
+}
+
+.gallery-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 24px;
+}
+
+
+/* =========================================
+   7. PROCESO DE TRABAJO
+========================================= */
+
+.process {
+  background: #f8f6f0;
+}
+
+.process > h2 {
+  margin-bottom: 54px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.process-grid article {
+  border-top: 1px solid #ded5c5;
+  padding-top: 18px;
+}
+
+.process-grid article > span {
+  font: italic 23px var(--serif);
+  color: var(--gold-dark);
+}
+
+.process-grid h3 {
+  font: 400 21px var(--serif);
+  margin: 25px 0 10px;
+}
+
+.process-grid p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 0;
+}
+
+
+/* =========================================
+   8. FORMULARIO DE COTIZACIÓN
+========================================= */
+
+.quote-section {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 10%;
+  background: #fff;
+}
+
+.quote-intro h2 {
+  margin-bottom: 23px;
+}
+
+.quote-intro > p {
+  margin-bottom: 30px;
+}
+
+.contact-detail {
+  border-top: 1px solid var(--line);
+  padding: 17px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-detail span,
+.form-title,
+.form-privacy {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+}
+
+.contact-detail a {
+  font-size: 13px;
+}
+
+.contact-detail a:hover {
+  color: var(--gold-dark);
+}
+
+.quote-form {
+  background: var(--cream);
+  padding: 32px;
+}
+
+.form-title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 22px;
+}
+
+.quote-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 11px;
+  margin-bottom: 17px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 13px 12px;
+  color: var(--ink);
+  font-size: 12px;
+  border-radius: 0;
+  outline: none;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+  border-color: var(--gold-dark);
+}
+
+.quote-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button-dark {
+  background: #383630;
+  color: white;
+  width: 100%;
+  margin-top: 3px;
+}
+
+.button-dark:hover {
+  background: #55534b;
+}
+
+.form-privacy,
+.form-note {
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  margin: 13px 0 0;
+  color: var(--muted);
+}
+
+.form-note {
+  color: #6b5938;
+}
+
+
+/* =========================================
+   9. PREGUNTAS FRECUENTES
+========================================= */
+
+.faq {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 10%;
+  background: var(--cream);
+}
+
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-list details:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.faq-list summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 0;
+  font: 400 17px var(--serif);
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary span {
+  font: 400 20px var(--serif);
+  color: var(--gold-dark);
+  transition: transform 0.2s;
+}
+
+.faq-list details[open] summary span {
+  transform: rotate(45deg);
+}
+
+.faq-list details p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
+  max-width: 540px;
+  margin: 0 25px 22px 0;
+}
+
+
+/* =========================================
+   10. PIE DE PÁGINA Y REDES SOCIALES
+========================================= */
+
+.footer {
+  background: #33332f;
+  color: #fff;
+  padding: 55px 9% 20px;
+}
+
+.footer-brand {
+  margin-bottom: 24px;
+}
+
+.footer-brand .brand-logo {
+  width: 180px;
+  max-height: 85px;
+  background: #fff;
+  padding: 6px;
+}
+
+.footer > p {
+  font: italic 20px var(--serif);
+  color: #e4dfd5;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 32px 0 50px;
+  font-size: 11px;
+  color: #e4dfd5;
+}
+
+.footer-links a {
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #e9d8b8;
+}
+
+.footer-bottom {
+  border-top: 1px solid #5a5952;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: #d0cec7;
+}
+
+.footer-bottom a {
+  color: #ead8b8;
+}
+
+
+/* =========================================
+   11. ANIMACIONES
+========================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroReveal {
+  from {
+    transform: scale(1.06);
+    opacity: 0.7;
+  }
+
+  to {
+    transform: scale(1.01);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* =========================================
+   12. TABLETAS
+========================================= */
+
+@media (max-width: 1050px) {
+  .site-header {
+    padding: 12px 4%;
+  }
+
+  .nav {
+    gap: 16px;
+  }
+
+  .section-pad {
+    padding: 85px 6%;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 18px;
+  }
+
+  .service-image {
+    height: 340px;
+  }
+
+  .quote-section,
+  .faq {
+    gap: 6%;
+  }
+
+  .gallery-grid {
+    grid-template-rows: 220px 200px;
+  }
+}
+
+
+/* =========================================
+   13. MÓVILES
+========================================= */
+
+@media (max-width: 720px) {
+  .announcement {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+  }
+
+  .site-header {
+    min-height: 72px;
+    padding: 10px 5%;
+  }
+
+  .brand-logo {
+    width: 145px;
+    max-height: 54px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    background: none;
+    border: 0;
+    color: var(--ink);
+  }
+
+  .menu-toggle span {
+    font-size: 18px;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 18px 5% 24px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    align-items: stretch;
+    gap: 0;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .nav-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav > a:not(.nav-cta) {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-cta {
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .hero {
+    height: 78svh;
+    min-height: 590px;
+    max-height: 760px;
+  }
+
+  .hero-image {
+    background-position: 58% center;
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(35, 32, 27, 0.65),
+        rgba(35, 32, 27, 0.2)
+      ),
+      linear-gradient(
+        0deg,
+        rgba(35, 32, 27, 0.3),
+        transparent 35%
+      );
+  }
+
+  .hero-content {
+    margin-left: 6%;
+    width: 88%;
+    padding: 50px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(47px, 12vw, 72px);
+  }
+
+  .hero-copy {
+    font-size: 13px;
+    max-width: 390px;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-bottom {
+    left: 6%;
+    right: 6%;
+    font-size: 8px;
+  }
+
+  .hero-bottom span:nth-child(2) {
+    display: none;
+  }
+
+  .section-pad {
+    padding: 70px 6%;
+  }
+
+  .intro-grid,
+  .quote-section,
+  .faq {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .intro h2,
+  .section-heading h2,
+  .process h2,
+  .quote-intro h2,
+  .faq h2 {
+    font-size: clamp(39px, 10vw, 55px);
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+
+  .section-heading > p {
+    max-width: 470px;
+  }
+
+  .service-grid {
+    gap: 26px 12px;
+  }
+
+  .service-image {
+    height: clamp(190px, 57vw, 300px);
+  }
+
+  .service-info {
+    gap: 8px;
+    padding-top: 14px;
+  }
+
+  .service-info h3 {
+    font-size: 18px;
+  }
+
+  .service-info p {
+    font-size: 10px;
+  }
+
+  .service-info > a {
+    width: 27px;
+    height: 27px;
+    flex-basis: 27px;
+  }
+
+  .statement {
+    padding: 75px 6%;
+  }
+
+  .statement h2 {
+    font-size: clamp(42px, 10vw, 62px);
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 190px 190px;
+    gap: 10px;
+  }
+
+  .gallery-item-1 {
+    grid-row: span 2;
+  }
+
+  .gallery-item-4 {
+    grid-column: 1 / 3;
+  }
+
+  .gallery-caption {
+    left: 14px;
+    bottom: 15px;
+    right: 30px;
+  }
+
+  .gallery-caption h3 {
+    font-size: 18px;
+  }
+
+  .gallery-caption span {
+    font-size: 8px;
+  }
+
+  .gallery-arrow {
+    right: 12px;
+    bottom: 17px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 18px;
+  }
+
+  .process > h2 {
+    margin-bottom: 35px;
+  }
+
+  .process-grid h3 {
+    font-size: 19px;
+    margin-top: 18px;
+  }
+
+  .quote-form {
+    padding: 22px 17px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .faq-list summary {
+    font-size: 16px;
+  }
+
+  .footer {
+    padding: 42px 6% 18px;
+  }
+
+  .footer-brand .brand-logo {
+    width: 155px;
+    max-height: 72px;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    font-size: 8px;
+  }
+
+  .footer-bottom span:nth-child(2) {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   14. TELÉFONOS PEQUEÑOS
+========================================= */
+
+@media (max-width: 390px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-image {
+    height: 340px;
+  }
+
+  .gallery-grid {
+    grid-template-rows: 220px 170px 170px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-bottom {
+    letter-spacing: 0.08em;
+  }
+}
